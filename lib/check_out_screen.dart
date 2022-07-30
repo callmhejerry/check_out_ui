@@ -16,12 +16,13 @@ class CheckOutScreen extends StatelessWidget {
           "Checkout",
           style: TextStyle(
             fontSize: 17.sp,
-            height: 1.29.h,
+            height: 1.29,
             letterSpacing: -0.41.w,
             fontWeight: FontWeight.w500,
             color: Colors.black,
           ),
         ),
+        leadingWidth: 100,
         leading: TextButton.icon(
           onPressed: () {},
           icon: const Icon(
@@ -29,10 +30,10 @@ class CheckOutScreen extends StatelessWidget {
             color: Colors.black,
           ),
           label: Text(
-            "back",
+            "Back",
             style: TextStyle(
               fontSize: 17.sp,
-              height: 1.29.h,
+              height: 1.29,
               color: Colors.black,
               letterSpacing: -0.41.w,
             ),
@@ -54,7 +55,7 @@ class CheckOutScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
-                      height: 1.38.h,
+                      height: 1.38,
                       letterSpacing: -0.08.w,
                     ),
                   ),
@@ -62,7 +63,7 @@ class CheckOutScreen extends StatelessWidget {
                     "it is completely free",
                     style: TextStyle(
                       fontSize: 12.sp,
-                      height: 1.33.h,
+                      height: 1.33,
                     ),
                   ),
                 ],
@@ -95,7 +96,7 @@ class CheckOutScreen extends StatelessWidget {
                         "Yellow bag edition",
                         style: TextStyle(
                           fontSize: 17.sp,
-                          height: 1.29.h,
+                          height: 1.29,
                           fontWeight: FontWeight.w500,
                           letterSpacing: -0.41.w,
                         ),
@@ -103,7 +104,7 @@ class CheckOutScreen extends StatelessWidget {
                       Text(
                         "100% Synthentic \n Leather",
                         style: TextStyle(
-                          height: 1.33.h,
+                          height: 1.33,
                           fontSize: 15.sp,
                           color: const Color(0xFF3C3C43),
                         ),
@@ -120,7 +121,7 @@ class CheckOutScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
-                    height: 1.29.h,
+                    height: 1.29,
                     letterSpacing: -0.41.w,
                   ),
                 ),
@@ -132,7 +133,7 @@ class CheckOutScreen extends StatelessWidget {
                       style: TextStyle(
                         color: const Color(0xff3c3c43).withOpacity(0.60),
                         fontSize: 15.sp,
-                        height: 1.33.h,
+                        height: 1.33,
                         letterSpacing: -0.24.w,
                       ),
                     ),
@@ -151,7 +152,7 @@ class CheckOutScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w500,
-                    height: 1.29.h,
+                    height: 1.29,
                     letterSpacing: -0.41.w,
                   ),
                 ),
@@ -163,7 +164,7 @@ class CheckOutScreen extends StatelessWidget {
                       style: TextStyle(
                         color: const Color(0xff3c3c43).withOpacity(0.60),
                         fontSize: 15.sp,
-                        height: 1.33.h,
+                        height: 1.33,
                         letterSpacing: -0.24.w,
                       ),
                     ),
@@ -173,15 +174,149 @@ class CheckOutScreen extends StatelessWidget {
                 Text(
                   "Free Delivery",
                   style: TextStyle(
-                      fontSize: 15.sp,
-                      height: 1.33.h,
-                      color: const Color(0xff1C1C1E),
-                      letterSpacing: -0.24.w),
+                    fontSize: 15.sp,
+                    height: 1.33,
+                    color: const Color(0xff1C1C1E),
+                    letterSpacing: -0.24.w,
+                  ),
                 ),
                 SizedBox(
                   height: 15.h,
                 ),
               ],
+            ),
+            CheckoutCard(
+              children: [
+                Text(
+                  "Payment",
+                  style: TextStyle(
+                    fontSize: 17.sp,
+                    fontWeight: FontWeight.w500,
+                    height: 1.29,
+                    letterSpacing: -0.41.w,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Select a payment method",
+                      style: TextStyle(
+                        color: const Color(0xff3c3c43).withOpacity(0.60),
+                        fontSize: 15.sp,
+                        height: 1.33,
+                        letterSpacing: -0.24.w,
+                      ),
+                    ),
+                    const Icon(Icons.arrow_drop_down),
+                  ],
+                ),
+                SizedBox(
+                  height: 15.h,
+                ),
+              ],
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                filled: true,
+                contentPadding:
+                    EdgeInsets.symmetric(horizontal: 16.w, vertical: 11.h),
+                fillColor: Colors.white,
+                hintText: "Discount promo code...",
+                hintStyle: TextStyle(
+                  fontSize: 17.sp,
+                  height: 1.29,
+                ),
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xFFFFC300),
+                  ),
+                ),
+                border: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1,
+                    color: const Color(0xff3c3c43).withOpacity(0.30),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                left: 16.w,
+                top: 16.h,
+                right: 16.w,
+                bottom: 10.h,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Subtotal: \$2227.00",
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          height: 1.33,
+                          letterSpacing: -0.24.w,
+                        ),
+                      ),
+                      Text(
+                        "Total",
+                        style: TextStyle(fontSize: 12.sp, height: 1.33.h),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 6.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Shipping: Free",
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          height: 1.33,
+                          letterSpacing: -0.24.w,
+                        ),
+                      ),
+                      Text(
+                        "\$2227.00",
+                        style: TextStyle(
+                          fontSize: 22.sp,
+                          height: 1.27,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 0.35.w,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xffFFC300),
+                      fixedSize: Size(343.w, 54.h),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40.r),
+                      ),
+                    ),
+                    child: Text(
+                      "Place order",
+                      style: TextStyle(
+                        fontSize: 22.sp,
+                        height: 1.27,
+                        letterSpacing: 0.35.w,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
